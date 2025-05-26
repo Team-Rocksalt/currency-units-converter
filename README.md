@@ -12,18 +12,19 @@ In payments and finance domain, it is very common to represent monetary values i
 The task is to implement the logic that converts a given amount value and a target currency to the proper unit representation.
 Whenever rounding is needed, use the half up rounding strategy.
 
-Implement the MonetaryConverter interface and make sure that your implementation is covered by unit tests.
+1. Implement the `MonetaryConverter` interface.
+2. make sure that your implementation is covered by unit tests.
 
 ## Examples
 
 * Examples for `convertToMinorUnits()`
 
-| Input          | Output |
-|----------------|--------|
-| "2311", "JPY"  | 2311   | 
-| "10", "BHD"    | 10000  |
-| 23.9977, "USD" | 2400   |
-| 100, "BHD"     | 100000 |
+| Input          | Output | Comment                        |
+|----------------|--------|--------------------------------|
+| "2311", "JPY"  | 2311   | 2 fraction digits              |                         
+| "10", "BHD"    | 10000  | 3 fraction digits              |             
+| 23.9977, "USD" | 2400   | 2 fractionn digits, rounded up | 
+| 100, "JPY"     | 100    | no fraction digits             | 
 
 * Examples for `convertToMajorUnits()`
 
@@ -34,7 +35,7 @@ Implement the MonetaryConverter interface and make sure that your implementation
 | 9999, "ISK"     | 9999   |
 
 ## Helpful links
-* 
+
 * https://www.mathsisfun.com/numbers/rounding-methods.html
-* https://en.wikipedia.org/wiki/ISO_4217 -- currencies and fractions
+* https://en.wikipedia.org/wiki/ISO_4217, description of currencies and fraction digits
 * https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Currency.html
