@@ -19,12 +19,13 @@ Whenever rounding is needed, use the half up rounding strategy.
 
 * Examples for `convertToMinorUnits()`
 
-| Input          | Output | Comment                        |
-|----------------|--------|--------------------------------|
-| "2311", "JPY"  | 2311   | 2 fraction digits              |                         
-| "10", "BHD"    | 10000  | 3 fraction digits              |             
-| 23.9977, "USD" | 2400   | 2 fractionn digits, rounded up | 
-| 100, "JPY"     | 100    | no fraction digits             | 
+| Input           | Output    | Comment                       |
+|-----------------|-----------|-------------------------------|
+| "2311", "JPY"   | 2311      | no fraction digits            |                         
+| "10", "BHD"     | 10000     | 3 fraction digits             |
+| 66.750, "BHD"   | 66750000  | 3 fraction digits             |
+| 23.9977, "USD"  | 2400      | 2 fraction digits, rounded up | 
+| 100, "JPY"      | 100       | no fraction digits            | 
 
 * Examples for `convertToMajorUnits()`
 
