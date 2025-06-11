@@ -29,11 +29,11 @@ Whenever rounding is needed, use the half up rounding strategy.
 
 * Examples for `convertToMajorUnits()`
 
-| Input           | Output |
-|-----------------|--------|
-| 2311, "JPY"     | 2311   |
-| 9, "EUR"        | 0.09   |
-| 9999, "ISK"     | 9999   |
+| Input           | Output  |
+|-----------------|---------|
+| 2311, "JPY"     | "2311"  |
+| 9, "EUR"        | "0.09"  |
+| 9999, "ISK"     | "9999"  |
 
 ## Helpful links
 
