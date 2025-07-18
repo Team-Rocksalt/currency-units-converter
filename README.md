@@ -14,26 +14,27 @@ Whenever rounding is needed, use the half up rounding strategy.
 
 1. Implement the `MonetaryConverter` interface.
 2. make sure that your implementation is covered by unit tests.
+3. unless specifically instructed, '.' (period) should be used as decimal separator; no thousand delimiter (separator) is to be used.
 
 ## Examples
 
 * Examples for `convertToMinorUnits()`
 
-| Input           | Output    | Comment                       |
-|-----------------|-----------|-------------------------------|
-| "2311", "JPY"   | 2311      | no fraction digits            |                         
-| "10", "BHD"     | 10000     | 3 fraction digits             |
-| 66.750, "BHD"   | 66750000  | 3 fraction digits             |
-| 23.9977, "USD"  | 2400      | 2 fraction digits, rounded up | 
-| 100, "JPY"      | 100       | no fraction digits            | 
+| Input           | Output | Comment                                                   |
+|-----------------|--------|-----------------------------------------------------------|
+| "2311", "JPY"   | 2311   | no fraction digits; JPY = Japanese yen                    |                         
+| "10", "BHD"     | 10000  | 3 fraction digits; BHD = Bahraini dinar                   |
+| 66.750, "BHD"   | 66750  | 3 fraction digits                                         |
+| 23.9977, "USD"  | 2400   | 2 fraction digits, rounded up; USD = United States dollar | 
+| 100, "JPY"      | 100    | no fraction digits                                        | 
 
 * Examples for `convertToMajorUnits()`
 
-| Input           | Output  |
-|-----------------|---------|
-| 2311, "JPY"     | "2311"  |
-| 9, "EUR"        | "0.09"  |
-| 9999, "ISK"     | "9999"  |
+| Input           | Output  | Comment               |
+|-----------------|---------|-----------------------|
+| 2311, "JPY"     | "2311"  | JPY = Japanese yen    |
+| 9, "EUR"        | "0.09"  | EUR = Euro            |
+| 9999, "ISK"     | "9999"  | ISK = Icelandic krona |
 
 ## Helpful links
 
